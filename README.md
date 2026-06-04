@@ -26,21 +26,6 @@ HTX Spot (all pairs) and HTX USDT-M Perpetual Futures.
 
 Authenticated skills require HTX API credentials. Apply at [HTX API Management](https://www.htx.com/en-us/apikey/).
 
-Recommended: export credentials as environment variables:
-
-```bash
-export HTX_API_KEY="your-access-key-id"
-export HTX_SECRET_KEY="your-secret-key"
-```
-
-Or use the CLI-managed config:
-
-```bash
-htx-cli config set-key    <AccessKeyId>
-htx-cli config set-secret <SecretKey>
-htx-cli config show
-```
-
 Recommended key hygiene:
 
 - Use a **read-only** key for `htx-spot-account` / `htx-futures-account`.
@@ -64,6 +49,21 @@ Recommended key hygiene:
 
 ```bash
 source ~/.zshrc # or source ~/.bashrc
+```
+
+Recommended: export credentials as environment variables:
+
+```bash
+export HTX_API_KEY="your-access-key-id"
+export HTX_SECRET_KEY="your-secret-key"
+```
+
+Or use the CLI-managed config:
+
+```bash
+htx-cli config set-key    <AccessKeyId>
+htx-cli config set-secret <SecretKey>
+htx-cli config show
 ```
 
 `npx` (Node.js ≥ 18) is required for the skills step; if it's missing, the binary still installs and the script prints a warning.
